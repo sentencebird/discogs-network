@@ -49,7 +49,7 @@ class ArtistsNetwork():
                 if not is_last_depth and node["id"] not in self.appended_artists_ids:
                     next_artist = discogs.fetch_artist(node["id"])
                     self.next_nodes_artists.append(next_artist)
-                self.network.add_node(node["name"], image=node["thumbnail_url"], shape="circularImage", title=f"<a href=\"{node['uri']}\" target='_parent'>詳細</a>")
+                self.network.add_node(node["name"], image=node["thumbnail_url"], shape="circularImage", title=f"<a href=\"https://www.discogs.com/ja/artist/{node['id']}\" target='_parent'>詳細</a>")
                 self.network.add_edge(artist["name"], node["name"])
                 
                 self.appended_artists_ids.append(node["id"])
