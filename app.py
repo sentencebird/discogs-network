@@ -84,6 +84,6 @@ if search:
         an.create_network(origin_artist)
         an.network.show(f"output_{result['id']}.html")
 
-        html_file = open(f"output.html_{result['id']}", 'r', encoding='utf-8')
+        html_file = open(f"output_{result['id']}.html", 'r', encoding='utf-8')
         source_code = html_file.read() 
         components.html(source_code, height=1200, width=1000)
